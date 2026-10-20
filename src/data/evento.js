@@ -6,7 +6,7 @@ export const evento = {
     numeros: [
         { quantidade: '3', item: 'Percursos' },
         { quantidade: '1.500', item: 'Participantes' },
-        { quantity: '6', item: 'Pontos de hidratação' }
+        { quantidade: '6', item: 'Pontos de hidratação' }
     ]
 }
 export const niveis = [
