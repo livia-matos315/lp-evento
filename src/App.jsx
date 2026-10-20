@@ -18,7 +18,7 @@ function Newsletter() {
   if (enviado) {
     return (
       <div className="max-w-md mx-auto my-10 p-6 bg-green-50 text-green-800 rounded-lg text-center font-medium shadow">
-        🎉 Pronto! Vamos avisar {email} sobre as novidades da corrida.
+         Pronto! Vamos avisar {email} sobre as novidades da corrida.
       </div>
     );
   }
@@ -33,7 +33,6 @@ function Newsletter() {
           <input
             type="email"
             required
-            placeholder="seuemail@exemplo.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="border p-2.5 rounded-lg bg-slate-50 focus:outline-none focus:ring-2 focus:ring-azul"

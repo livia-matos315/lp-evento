@@ -1,3 +1,5 @@
+import { evento } from "../data/evento";
+
 function Hero() {
   return (
     <section className="bg-azul px-4 py-24 text-white text-center flex flex-col items-center justify-center">
@@ -11,11 +13,12 @@ function Hero() {
         "{evento.slogan}"
       </p>
       <div className="mt-6 text-sm md:text-base text-slate-200 bg-black/20 px-6 py-3 rounded-lg backdrop-blur-sm space-y-1">
-        <p className="font-semibold text-white">🗓️ {evento.data} · {evento.horario}</p>
-        <p>📍 {evento.local}</p>
+        <p className="font-semibold text-white">🗓️ {evento.data}</p>
+
+        <p>📍 Centro, Osvaldo Cruz - SP</p>
       </div>
     </section>
   );
 }
-export default Hero;
 
+export default Hero;
