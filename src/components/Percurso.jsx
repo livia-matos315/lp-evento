@@ -1,4 +1,4 @@
-import { niveis } from "../data/evento"; // O array de dados correto
+import { niveis } from "../data/evento";
 import CartaoPercurso from "./CartaoPercurso";
 
 function Percursos() {
@@ -13,11 +13,8 @@ function Percursos() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {niveis.map((item) => (
-          <CartaoPercurso key={item.nome} descricao={item.descricao}>
-            {item.nome} —{" "}
-            <span className="text-sm font-normal text-slate-500 italic">
-              {item.nivel}
-            </span>
+          <CartaoPercurso key={item.nome} descricao={`Categoria recomendada: ${item.nivel}`}>
+            {item.nome}
           </CartaoPercurso>
         ))}
       </div>

@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import Cabecalho from './components/Cabecalho'; 
 import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Percursos from './components/Percurso';
 import Programacao from './components/Programacao';
+import Inscricao from './components/Inscricao'; 
 import Faq from './components/Faq';
 import Rodape from './components/Rodape';
 
@@ -17,14 +19,14 @@ function Newsletter() {
 
   if (enviado) {
     return (
-      <div className="max-w-md mx-auto my-10 p-6 bg-green-50 text-green-800 rounded-lg text-center font-medium shadow">
+      <div role="status" className="max-w-md mx-auto my-10 p-6 bg-green-50 text-green-800 rounded-lg text-center font-medium shadow">
          Pronto! Vamos avisar {email} sobre as novidades da corrida.
       </div>
     );
   }
   
   return (
-    <section className="bg-azul py-16 px-4 text-white">
+    <section id="notificacoes" className="bg-azul py-16 px-4 text-white">
       <form onSubmit={enviar} className="bg-white text-slate-800 p-8 flex flex-col gap-4 max-w-md mx-auto rounded-xl shadow-lg">
         <h3 className="text-xl font-bold text-azul text-center">Fique por dentro!</h3>
         <p className="text-sm text-slate-500 text-center mb-2">Receba avisos de lotes e novidades da corrida no seu e-mail.</p>
@@ -33,6 +35,7 @@ function Newsletter() {
           <input
             type="email"
             required
+            autoComplete="email" 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="border p-2.5 rounded-lg bg-slate-50 focus:outline-none focus:ring-2 focus:ring-azul"
@@ -48,15 +51,29 @@ function Newsletter() {
 
 function App() {
   return (
-    <main className="bg-white min-h-screen font-sans antialiased text-slate-800">
-      <Hero />
-      <Sobre />
-      <Percursos />
-      <Programacao />
-      <Newsletter />
-      <Faq />
-      <Rodape />
-    </main>
+    <>
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-amarelo focus:text-azul focus:p-3 focus:rounded-lg focus:font-bold focus:z-[60]"
+      >
+        Pular para o conteúdo
+      </a>
+      
+      <Cabecalho />
+      
+      <main id="conteudo" className="bg-white min-h-screen font-sans antialiased text-slate-800">
+        <Hero />
+        <Sobre />
+        <Percursos />
+        <Programacao />
+        
+        <Inscricao /> 
+        
+        <Newsletter />
+        <Faq />
+        <Rodape />
+      </main>
+    </>
   );
 }
 export default App;
