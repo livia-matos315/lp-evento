@@ -7,6 +7,7 @@ import Programacao from './components/Programacao';
 import Inscricao from './components/Inscricao'; 
 import Faq from './components/Faq';
 import Rodape from './components/Rodape';
+import Grafico from './components/Grafico';
 
 function Newsletter() {
   const [email, setEmail] = useState('');
@@ -69,6 +70,7 @@ function App() {
         
         <Inscricao /> 
         
+        <Grafico />
         <Newsletter />
         <Faq />
         <Rodape />

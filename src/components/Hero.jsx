@@ -1,9 +1,10 @@
 import { evento } from "../data/evento";
+import BotaoLembrete from "./BotaoLembrete";
 
 function Hero() {
   const rolarParaInscricao = () => {
     const elemento = document.getElementById("inscricao");
-    if (element) {
+    if (elemento) {
       elemento.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -32,6 +33,7 @@ function Hero() {
       >
         Quero me Inscrever 🏃‍♂️
       </button>
+      <BotaoLembrete />
     </section>
   );
 }
